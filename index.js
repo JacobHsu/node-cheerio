@@ -1,5 +1,5 @@
 const request = require('request');
-const cheerio = require('cheerio')
+const cheerio = require('cheerio');
 
 const url = 'https://www.cwb.gov.tw/V7/forecast/taiwan/New_Taipei_City.htm'
 
