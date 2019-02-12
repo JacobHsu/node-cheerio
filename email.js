@@ -28,13 +28,15 @@ async function main(){
     }
   });
 
+  let content = process.argv[2] || 'default';
+
   // setup email data with unicode symbols
   let mailOptions = {
     from: `"jacobhsu 👻" <${credentials.gmail.user}>`, // sender address
     to: "jacob.hsu.tw@gmail.com", // list of receivers
-    subject: "Hello hi ✔", // Subject line
-    text: "Hello world?", // plain text body
-    html: "<b>Hello world?</b>" // html body
+    subject: `Hello Soft_Job ✔`, // Subject line
+    text: "Today Soft_Job", // plain text body
+    html: `<b>Hello world</b><br> ${content}` // html body
   };
 
   // send mail with defined transport object
@@ -42,7 +44,7 @@ async function main(){
 
   console.log("Message sent: %s", info.messageId);
   // Preview only available when sending through an Ethereal account
-  console.log("Preview URL: %s", nodemailer.getTestMessageUrl(info));
+  //console.log("Preview URL: %s", nodemailer.getTestMessageUrl(info));
 
   // Message sent: <b658f8ca-6296-ccf4-8306-87d57a0b4321@example.com>
   // Preview URL: https://ethereal.email/message/WaQKMgKddxQDoou...

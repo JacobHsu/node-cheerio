@@ -4,7 +4,7 @@
 
 `npm install`    
 `node index.js` 抓取中央氣象局的網站在地天氣  
-`node app` 抓取 Soft_Job 徵才資訊
+`node app` 抓取 Soft_Job 徵才資訊 並發送至email
 
 # Dev
 

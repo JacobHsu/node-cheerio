@@ -1,5 +1,6 @@
 const request = require('request');
 const cheerio = require('cheerio');
+const cp = require('child_process');
 
 // async 表示該 function 是個非同步的
 const getJobs = async () => {
@@ -21,6 +22,7 @@ const requestCurrentPage = async url => {
       const jobslist = await cheerioPttJobs(body);
       if (jobslist === null) return null;
       console.log(jobslist);
+      cp.exec('node email.js '+JSON.stringify(jobslist), {});
 
       const date = new Date();
       let result = {};
